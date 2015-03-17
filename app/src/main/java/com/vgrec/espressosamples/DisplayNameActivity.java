@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 
-import com.vgrec.R;
-
 
 public class DisplayNameActivity extends ActionBarActivity {
 

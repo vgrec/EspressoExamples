@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vgrec" >
+    package="com.vgrec.espressosamples" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".espressosamples.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,16 +17,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".espressosamples.EnterNameActivity"
+            android:name=".EnterNameActivity"
             android:label="@string/title_activity_enter_name" >
         </activity>
         <activity
-            android:name=".espressosamples.DisplayNameActivity"
+            android:name=".DisplayNameActivity"
             android:label="@string/title_activity_display_name" >
         </activity>
         <activity
-            android:name=".espressosamples.SpinnerSelectionActivity"
+            android:name=".SpinnerSelectionActivity"
             android:label="@string/title_activity_spinner_selection" >
+        </activity>
+
+        <activity
+            android:name=".CustomListActivity"
+            android:label="@string/title_activity_custom_list" >
         </activity>
     </application>
 

@@ -8,8 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.vgrec.R;
-
 
 public class SpinnerSelectionActivity extends ActionBarActivity {
 

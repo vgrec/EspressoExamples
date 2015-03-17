@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.vgrec.R;
-
 
 public class EnterNameActivity extends ActionBarActivity {
 

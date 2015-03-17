@@ -6,48 +6,36 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 
-import com.vgrec.R;
+import java.util.HashMap;
+import java.util.Map;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setListenersFor(
-                R.id.type_text_button,
-                R.id.spinner_selection_button,
-                R.id.custom_list_adapter_button,
-                R.id.search_view_button,
-                R.id.action_bar_button,
-                R.id.viewpager_button,
-                R.id.dialogs_button,
-                R.id.recycler_view_button
-        );
+        // Hold button ids with the corresponding Activities to launch, when a button is clicked
+        Map<Integer, Class<? extends Activity>> actions = new HashMap<>();
+
+        actions.put(R.id.type_text_button, EnterNameActivity.class);
+        actions.put(R.id.spinner_selection_button, SpinnerSelectionActivity.class);
+        actions.put(R.id.custom_list_adapter_button, CustomListActivity.class);
+
+        setListeners(actions);
     }
 
-    private void setListenersFor(int... buttonsResId) {
-        for (int resId : buttonsResId) {
-            findViewById(resId).setOnClickListener(this);
+    private void setListeners(Map<Integer, Class<? extends Activity>> actions) {
+        for (final Map.Entry<Integer, Class<? extends Activity>> entry : actions.entrySet()) {
+            findViewById(entry.getKey()).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, entry.getValue());
+                    startActivity(intent);
+                }
+            });
         }
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.type_text_button:
-                openActivity(EnterNameActivity.class);
-                break;
-            case R.id.spinner_selection_button:
-                openActivity(SpinnerSelectionActivity.class);
-                break;
-        }
-    }
-
-    private <T extends Activity> void openActivity(Class<T> activity) {
-        Intent intent = new Intent(this, activity);
-        startActivity(intent);
     }
 }

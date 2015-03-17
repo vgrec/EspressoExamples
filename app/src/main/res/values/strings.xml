@@ -18,4 +18,5 @@
     <string name="title_activity_display_name">DisplayNameActivity</string>
     <string name="mandatory">Mandatory field</string>
     <string name="title_activity_spinner_selection">SpinnerSelectionActivity</string>
+    <string name="title_activity_custom_list">CustomListActivity</string>
 </resources>
