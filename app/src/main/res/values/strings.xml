@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EspressoSamples</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="type_text">Type text</string>
+    <string name="spinner_selection">Spinner selection</string>
+    <string name="custom_list_adapter">Custom List Adapter</string>
+    <string name="search_view">SearchView</string>
+    <string name="actionbar">ActionBar</string>
+    <string name="viewpager">ViewPager</string>
+    <string name="dialogs">Dialogs</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="examples_of_features_tested">Examples of features tested</string>
+    <string name="title_activity_enter_name">EnterNameActivity</string>
+    <string name="enter_name">Enter name</string>
+    <string name="next">Next</string>
+    <string name="title_activity_display_name">DisplayNameActivity</string>
+    <string name="mandatory">Mandatory field</string>
+    <string name="title_activity_spinner_selection">SpinnerSelectionActivity</string>
+</resources>
