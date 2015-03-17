@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 openActivity(EnterNameActivity.class);
                 break;
             case R.id.spinner_selection_button:
-//                openActivity(SpinnerActivity.class);
+                openActivity(SpinnerSelectionActivity.class);
                 break;
         }
     }

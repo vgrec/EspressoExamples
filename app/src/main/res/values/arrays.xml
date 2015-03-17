@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="europe_countries">
+        <item>Select your country</item>
+        <item>Germany</item>
+        <item>Austria</item>
+        <item>Switzerland</item>
+        <item>Liechtenstein</item>
+        <item>Luxembourg</item>
+        <item>Belgium</item>
+        <item>France</item>
+        <item>Netherlands</item>
+        <item>Denmark</item>
+        <item>Poland</item>
+        <item>Czech Republic</item>
+        <item>Italy</item>
+        <item>Spain</item>
+        <item>Portugal</item>
+        <item>United Kingdom</item>
+        <item>Northern Ireland</item>
+        <item>Norway</item>
+        <item>Sweden</item>
+        <item>Finland</item>
+        <item>Slovakia</item>
+        <item>Hungary</item>
+        <item>Macedonia</item>
+        <item>Moldova</item>
+        <item>Russia</item>
+        <item>Estonia</item>
+        <item>Latvia</item>
+        <item>Monaco</item>
+    </string-array>
+</resources>

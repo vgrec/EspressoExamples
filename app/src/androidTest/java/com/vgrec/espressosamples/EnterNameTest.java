@@ -12,7 +12,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 
 /**
@@ -39,7 +38,7 @@ public class EnterNameTest extends ActivityInstrumentationTestCase2<EnterNameAct
 
     public void testErrorMessageDisplayed() {
         // Making sure the error message is not displayed by default
-        onView(withId(R.id.error_text)).check(matches(is(not(isDisplayed()))));
+        onView(withId(R.id.error_text)).check(matches(not(isDisplayed())));
 
         // Click on "Next" button
         onView(withId(R.id.next_button)).perform(click());
