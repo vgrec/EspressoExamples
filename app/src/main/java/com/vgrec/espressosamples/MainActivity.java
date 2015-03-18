@@ -23,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
         actions.put(R.id.type_text_button, EnterNameActivity.class);
         actions.put(R.id.spinner_selection_button, SpinnerSelectionActivity.class);
         actions.put(R.id.custom_list_adapter_button, CustomListActivity.class);
+        actions.put(R.id.search_view_button, SearchViewActivity.class);
 
         setListeners(actions);
     }

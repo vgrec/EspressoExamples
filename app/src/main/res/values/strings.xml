@@ -20,4 +20,9 @@
     <string name="title_activity_spinner_selection">SpinnerSelectionActivity</string>
     <string name="title_activity_custom_list">CustomListActivity</string>
     <string name="title_activity_book_details">BookDetailsActivity</string>
+    <string name="search_hint">Search books</string>
+    <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="no_items_found">No items found!</string>
+    <string name="title_activity_search_view">SearchViewActivity</string>
+    <string name="search">Search</string>
 </resources>
