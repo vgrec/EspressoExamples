@@ -46,6 +46,11 @@
             android:name=".SearchViewActivity"
             android:label="@string/title_activity_search_view" />
 
+        <provider
+            android:authorities="com.vgrec.espressosamples"
+            android:name=".provider.AppRecentSearchesProvider"
+            android:exported="false" />
+
     </application>
 
 </manifest>

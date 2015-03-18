@@ -4,9 +4,13 @@ import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
+import android.provider.SearchRecentSuggestions;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
+import android.view.View;
+
+import com.vgrec.espressosamples.provider.AppRecentSearchesProvider;
 
 
 public class SearchViewActivity extends ActionBarActivity {
@@ -15,6 +19,21 @@ public class SearchViewActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_view);
+
+        findViewById(R.id.clear_suggestions_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearSearchHistory();
+            }
+        });
+    }
+
+    private void clearSearchHistory() {
+        SearchRecentSuggestions suggestions = new SearchRecentSuggestions(
+                this,
+                AppRecentSearchesProvider.AUTHORITY,
+                AppRecentSearchesProvider.MODE);
+        suggestions.clearHistory();
     }
 
     @Override

@@ -3,9 +3,12 @@ package com.vgrec.espressosamples;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.SearchRecentSuggestions;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.vgrec.espressosamples.provider.AppRecentSearchesProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +42,16 @@ public class SearchableActivity extends ActionBarActivity {
             String query = intent.getStringExtra(SearchManager.QUERY);
             List<String> results = search(query);
             listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, results));
+            saveRecentQuery(query);
         }
+    }
+
+    private void saveRecentQuery(String query) {
+        SearchRecentSuggestions suggestions = new SearchRecentSuggestions(
+                this,
+                AppRecentSearchesProvider.AUTHORITY,
+                AppRecentSearchesProvider.MODE);
+        suggestions.saveRecentQuery(query, null);
     }
 
     private List<String> search(String query) {
