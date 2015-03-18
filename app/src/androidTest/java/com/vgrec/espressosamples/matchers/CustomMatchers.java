@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 
+import com.vgrec.espressosamples.models.Book;
+
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
@@ -64,4 +66,45 @@ public class CustomMatchers {
         return withItemContent(equalTo(expectedText));
     }
 
+    public static Matcher<Object> withBookId(final int bookId) {
+        return new BoundedMatcher<Object, Book>(Book.class) {
+            @Override
+            protected boolean matchesSafely(Book book) {
+                return bookId == book.getId();
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("with id: " + bookId);
+            }
+        };
+    }
+
+    public static Matcher<Object> withBookTitle(final String bookTitle) {
+        return new BoundedMatcher<Object, Book>(Book.class) {
+            @Override
+            protected boolean matchesSafely(Book book) {
+                return bookTitle.equals(book.getTitle());
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("with id: " + bookTitle);
+            }
+        };
+    }
+
+    public static Matcher<Object> withBookAuthor(final String bookAuthor) {
+        return new BoundedMatcher<Object, Book>(Book.class) {
+            @Override
+            protected boolean matchesSafely(Book book) {
+                return bookAuthor.equals(book.getAuthor());
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("with id: " + bookAuthor);
+            }
+        };
+    }
 }

@@ -2,8 +2,6 @@ package com.vgrec.espressosamples;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.vgrec.R;
-
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -16,8 +14,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.not;
-
-;
 
 
 /**

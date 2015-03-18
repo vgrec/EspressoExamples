@@ -10,6 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.vgrec.espressosamples.models.Book;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -92,33 +94,6 @@ public class CustomListActivity extends ActionBarActivity {
             bookAuthor.setText("by " + items.get(position).getAuthor());
 
             return convertView;
-        }
-    }
-
-    /**
-     * The model class used in this activity
-     */
-    private class Book {
-        private int id;
-        private String title;
-        private String author;
-
-        private Book(int id, String title, String author) {
-            this.id = id;
-            this.title = title;
-            this.author = author;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getAuthor() {
-            return author;
-        }
-
-        public int getId() {
-            return id;
         }
     }
 }
