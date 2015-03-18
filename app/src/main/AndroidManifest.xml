@@ -28,10 +28,13 @@
             android:name=".SpinnerSelectionActivity"
             android:label="@string/title_activity_spinner_selection" >
         </activity>
-
         <activity
             android:name=".CustomListActivity"
             android:label="@string/title_activity_custom_list" >
+        </activity>
+        <activity
+            android:name=".BookDetailsActivity"
+            android:label="@string/title_activity_book_details" >
         </activity>
     </application>
 

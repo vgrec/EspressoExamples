@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp">
 
+    <ImageView
+        android:id="@+id/icon"
+        android:src="@drawable/book"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="8dp" />
+
     <TextView
         android:id="@+id/book_title"
+        android:layout_toRightOf="@id/icon"
+        android:layout_toEndOf="@id/icon"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="Some Cool Book" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_below="@id/book_title"
+        android:layout_toRightOf="@id/icon"
+        android:layout_toEndOf="@id/icon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        tools:text="by Awesome Author" />
+
+</RelativeLayout>

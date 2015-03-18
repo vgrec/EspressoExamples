@@ -1,14 +1,17 @@
 package com.vgrec.espressosamples;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class CustomListActivity extends ActionBarActivity {
@@ -20,6 +23,17 @@ public class CustomListActivity extends ActionBarActivity {
 
         ListView list = (ListView) findViewById(R.id.list);
         list.setAdapter(new BooksAdapter());
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Book book = (Book) parent.getItemAtPosition(position);
+                Intent intent = new Intent(CustomListActivity.this, BookDetailsActivity.class);
+                intent.putExtra(BookDetailsActivity.TITLE, book.getTitle());
+                intent.putExtra(BookDetailsActivity.AUTHOR, book.getAuthor());
+                startActivity(intent);
+            }
+        });
     }
 
     /**
@@ -30,26 +44,25 @@ public class CustomListActivity extends ActionBarActivity {
         /**
          * Some dummy items
          */
-        private ArrayList<Book> items = new ArrayList<Book>() {
-            {
-                add(new Book("Some book", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Book 2", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Alice in the", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("C++ for primers", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("What to do", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("How much", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Why", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Be cool", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Anton", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Alizar", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("How amazon", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Aricie", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Master Book", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Nonavici", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Roberto", "Robert Mulavski", R.mipmap.ic_launcher));
-                add(new Book("Utilita", "Robert Mulavski", R.mipmap.ic_launcher));
-            }
-        };
+        private ArrayList<Book> items = new ArrayList<>(Arrays.asList(
+                new Book(1, "Some book", "Robert Mulavski"),
+                new Book(2, "Some book", "Robert Mulavski"),
+                new Book(3, "Book 2", "Robert Mulavski"),
+                new Book(4, "Alice in the", "Robert Mulavski"),
+                new Book(5, "C++ for primers", "Robert Mulavski"),
+                new Book(6, "What to do", "Robert Mulavski"),
+                new Book(7, "How much", "Robert Mulavski"),
+                new Book(8, "Why", "Robert Mulavski"),
+                new Book(9, "Be cool", "Robert Mulavski"),
+                new Book(10, "Anton", "Robert Mulavski"),
+                new Book(11, "Alizar", "Robert Mulavski"),
+                new Book(12, "How amazon", "Robert Mulavski"),
+                new Book(13, "Aricie", "Robert Mulavski"),
+                new Book(14, "Master Book", "Robert Mulavski"),
+                new Book(15, "Nonavici", "Robert Mulavski"),
+                new Book(16, "Roberto", "Robert Mulavski"),
+                new Book(17, "Utilita", "Robert Mulavski")
+        ));
 
         @Override
         public int getCount() {
@@ -72,8 +85,11 @@ public class CustomListActivity extends ActionBarActivity {
                 convertView = getLayoutInflater().inflate(R.layout.item_book, parent, false);
             }
 
-            TextView titleTextView = (TextView) convertView.findViewById(R.id.book_title);
-            titleTextView.setText(items.get(position).getTitle());
+            TextView bookTitle = (TextView) convertView.findViewById(R.id.book_title);
+            bookTitle.setText(items.get(position).getTitle());
+
+            TextView bookAuthor = (TextView) convertView.findViewById(R.id.book_author);
+            bookAuthor.setText("by " + items.get(position).getAuthor());
 
             return convertView;
         }
@@ -83,14 +99,14 @@ public class CustomListActivity extends ActionBarActivity {
      * The model class used in this activity
      */
     private class Book {
+        private int id;
         private String title;
         private String author;
-        private int image;
 
-        private Book(String title, String author, int image) {
+        private Book(int id, String title, String author) {
+            this.id = id;
             this.title = title;
             this.author = author;
-            this.image = image;
         }
 
         public String getTitle() {
@@ -101,8 +117,8 @@ public class CustomListActivity extends ActionBarActivity {
             return author;
         }
 
-        public int getImage() {
-            return image;
+        public int getId() {
+            return id;
         }
     }
 }

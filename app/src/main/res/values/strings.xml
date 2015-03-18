@@ -19,4 +19,5 @@
     <string name="mandatory">Mandatory field</string>
     <string name="title_activity_spinner_selection">SpinnerSelectionActivity</string>
     <string name="title_activity_custom_list">CustomListActivity</string>
+    <string name="title_activity_book_details">BookDetailsActivity</string>
 </resources>
