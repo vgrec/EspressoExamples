@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EspressoSamples</string>
+    <string name="app_name">EspressoExamples</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

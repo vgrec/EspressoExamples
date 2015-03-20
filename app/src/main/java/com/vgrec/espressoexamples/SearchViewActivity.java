@@ -1,16 +1,12 @@
-package com.vgrec.espressosamples;
+package com.vgrec.espressoexamples;
 
 import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
-import android.provider.SearchRecentSuggestions;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
-import android.view.View;
-
-import com.vgrec.espressosamples.provider.AppRecentSearchesProvider;
 
 
 public class SearchViewActivity extends ActionBarActivity {

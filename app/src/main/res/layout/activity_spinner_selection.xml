@@ -7,7 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.vgrec.espressosamples.SpinnerSelectionActivity">
+    tools:context="com.vgrec.espressoexamples.SpinnerSelectionActivity">
 
     <Spinner
         android:id="@+id/countries_spinner"

@@ -1,4 +1,4 @@
-package com.vgrec.espressosamples;
+package com.vgrec.espressoexamples;
 
 import android.test.ActivityInstrumentationTestCase2;
 

@@ -1,11 +1,11 @@
-package com.vgrec.espressosamples.matchers;
+package com.vgrec.espressoexamples.matchers;
 
 import android.support.test.espresso.matcher.BoundedMatcher;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 
-import com.vgrec.espressosamples.models.Book;
+import com.vgrec.espressoexamples.models.Book;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;

@@ -1,4 +1,4 @@
-package com.vgrec.espressosamples.provider;
+package com.vgrec.espressoexamples.provider;
 
 import android.content.SearchRecentSuggestionsProvider;
 

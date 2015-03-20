@@ -1,4 +1,4 @@
-package com.vgrec.espressosamples;
+package com.vgrec.espressoexamples;
 
 import android.test.ActivityInstrumentationTestCase2;
 
@@ -8,8 +8,8 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.vgrec.espressosamples.matchers.CustomMatchers.withAdaptedData;
-import static com.vgrec.espressosamples.matchers.CustomMatchers.withItemContent;
+import static com.vgrec.espressoexamples.matchers.CustomMatchers.withAdaptedData;
+import static com.vgrec.espressoexamples.matchers.CustomMatchers.withItemContent;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.instanceOf;

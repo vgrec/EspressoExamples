@@ -1,4 +1,4 @@
-package com.vgrec.espressosamples.models;
+package com.vgrec.espressoexamples.models;
 
 /**
  * @author vgrec, created on 3/18/15.

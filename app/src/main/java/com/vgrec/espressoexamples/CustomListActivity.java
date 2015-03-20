@@ -1,4 +1,4 @@
-package com.vgrec.espressosamples;
+package com.vgrec.espressoexamples;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.vgrec.espressosamples.models.Book;
+import com.vgrec.espressoexamples.models.Book;
 
 import java.util.ArrayList;
 import java.util.Arrays;

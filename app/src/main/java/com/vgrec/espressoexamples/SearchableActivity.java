@@ -1,4 +1,4 @@
-package com.vgrec.espressosamples;
+package com.vgrec.espressoexamples;
 
 import android.app.SearchManager;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.vgrec.espressosamples.provider.AppRecentSearchesProvider;
+import com.vgrec.espressoexamples.provider.AppRecentSearchesProvider;
 
 import java.util.ArrayList;
 import java.util.List;
