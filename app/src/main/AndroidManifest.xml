@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vgrec.espressosamples">
+    package="com.vgrec.espressosamples" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +33,7 @@
             android:label="@string/title_activity_book_details" />
         <activity
             android:name=".SearchableActivity"
-            android:label="@string/title_activity_searchable">
+            android:label="@string/title_activity_searchable" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -47,10 +47,14 @@
             android:label="@string/title_activity_search_view" />
 
         <provider
-            android:authorities="com.vgrec.espressosamples"
             android:name=".provider.AppRecentSearchesProvider"
+            android:authorities="com.vgrec.espressosamples"
             android:exported="false" />
 
+        <activity
+            android:name=".ActionBarExampleActivity"
+            android:label="@string/title_activity_action_bar_example" >
+        </activity>
     </application>
 
 </manifest>
