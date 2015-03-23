@@ -30,4 +30,5 @@
     <string name="action_about">About</string>
     <string name="toogle_actionmode">Toggle ActionMode</string>
     <string name="action_mode_one">ActionMode1</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
 </resources>

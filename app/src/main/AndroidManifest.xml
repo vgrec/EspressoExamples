@@ -55,6 +55,10 @@
             android:name=".ActionBarExampleActivity"
             android:label="@string/title_activity_action_bar_example" >
         </activity>
+        <activity
+            android:name=".ViewPagerActivity"
+            android:label="@string/title_activity_view_pager" >
+        </activity>
     </application>
 
 </manifest>
