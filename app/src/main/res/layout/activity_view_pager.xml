@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.vgrec.espressoexamples.ViewPagerActivity">
+    tools:context="com.vgrec.espressoexamples.activities.ViewPagerActivity">
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"

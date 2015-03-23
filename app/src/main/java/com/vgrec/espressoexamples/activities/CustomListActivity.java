@@ -1,4 +1,4 @@
-package com.vgrec.espressoexamples;
+package com.vgrec.espressoexamples.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.vgrec.espressoexamples.Database;
+import com.vgrec.espressoexamples.R;
 import com.vgrec.espressoexamples.adapter.BooksAdapter;
 import com.vgrec.espressoexamples.models.Book;
 

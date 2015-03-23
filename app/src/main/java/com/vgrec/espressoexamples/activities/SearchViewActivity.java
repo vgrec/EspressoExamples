@@ -1,4 +1,4 @@
-package com.vgrec.espressoexamples;
+package com.vgrec.espressoexamples.activities;
 
 import android.app.SearchManager;
 import android.content.ComponentName;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
+
+import com.vgrec.espressoexamples.R;
 
 
 public class SearchViewActivity extends ActionBarActivity {

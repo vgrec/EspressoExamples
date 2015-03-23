@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,22 +17,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EnterNameActivity"
+            android:name=".activities.EnterNameActivity"
             android:label="@string/title_activity_enter_name" />
         <activity
-            android:name=".DisplayNameActivity"
+            android:name=".activities.DisplayNameActivity"
             android:label="@string/title_activity_display_name" />
         <activity
-            android:name=".SpinnerSelectionActivity"
+            android:name=".activities.SpinnerSelectionActivity"
             android:label="@string/title_activity_spinner_selection" />
         <activity
-            android:name=".CustomListActivity"
+            android:name=".activities.CustomListActivity"
             android:label="@string/title_activity_custom_list" />
         <activity
-            android:name=".BookDetailsActivity"
+            android:name=".activities.BookDetailsActivity"
             android:label="@string/title_activity_book_details" />
         <activity
-            android:name=".SearchableActivity"
+            android:name=".activities.SearchableActivity"
             android:label="@string/title_activity_searchable" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -43,7 +43,7 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".SearchViewActivity"
+            android:name=".activities.SearchViewActivity"
             android:label="@string/title_activity_search_view" />
 
         <provider
@@ -52,11 +52,11 @@
             android:exported="false" />
 
         <activity
-            android:name=".ActionBarExampleActivity"
+            android:name=".activities.ActionBarExampleActivity"
             android:label="@string/title_activity_action_bar_example" >
         </activity>
         <activity
-            android:name=".ViewPagerActivity"
+            android:name=".activities.ViewPagerActivity"
             android:label="@string/title_activity_view_pager" >
         </activity>
     </application>

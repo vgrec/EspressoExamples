@@ -1,10 +1,12 @@
-package com.vgrec.espressoexamples;
+package com.vgrec.espressoexamples.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+
+import com.vgrec.espressoexamples.R;
 
 
 public class MainActivity extends ActionBarActivity {

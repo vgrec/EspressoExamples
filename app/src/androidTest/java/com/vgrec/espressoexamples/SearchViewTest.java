@@ -3,6 +3,8 @@ package com.vgrec.espressoexamples;
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.EditText;
 
+import com.vgrec.espressoexamples.activities.SearchViewActivity;
+
 import org.hamcrest.Matchers;
 
 import static android.support.test.espresso.Espresso.onData;

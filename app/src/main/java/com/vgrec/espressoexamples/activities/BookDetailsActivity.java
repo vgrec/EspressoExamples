@@ -1,8 +1,10 @@
-package com.vgrec.espressoexamples;
+package com.vgrec.espressoexamples.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
+
+import com.vgrec.espressoexamples.R;
 
 
 public class BookDetailsActivity extends ActionBarActivity {

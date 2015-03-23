@@ -2,6 +2,8 @@ package com.vgrec.espressoexamples;
 
 import android.test.ActivityInstrumentationTestCase2;
 
+import com.vgrec.espressoexamples.activities.SpinnerSelectionActivity;
+
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
