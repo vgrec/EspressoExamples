@@ -22,6 +22,7 @@ public class MainActivity extends ActionBarActivity {
         setListener(R.id.search_view_button, SearchViewActivity.class);
         setListener(R.id.action_bar_button, ActionBarExampleActivity.class);
         setListener(R.id.viewpager_button, ViewPagerActivity.class);
+        setListener(R.id.dialogs_button, DialogExampleActivity.class);
     }
 
     private <T extends Activity> void setListener(int buttonResId, final Class<T> activity) {

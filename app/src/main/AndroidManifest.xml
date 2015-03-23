@@ -59,6 +59,10 @@
             android:name=".activities.ViewPagerActivity"
             android:label="@string/title_activity_view_pager" >
         </activity>
+        <activity
+            android:name=".activities.DialogExampleActivity"
+            android:label="@string/title_activity_dialog_example" >
+        </activity>
     </application>
 
 </manifest>
