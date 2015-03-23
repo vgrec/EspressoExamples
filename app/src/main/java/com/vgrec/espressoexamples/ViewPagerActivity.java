@@ -27,6 +27,7 @@ public class ViewPagerActivity extends ActionBarActivity {
 
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {
+        private String[] tabs = {"New", "All"};
 
         public ViewPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -34,12 +35,37 @@ public class ViewPagerActivity extends ActionBarActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return null;
+            return newBooksFragment(position);
         }
 
         @Override
         public int getCount() {
-            return 0;
+            return tabs.length;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tabs[position];
+        }
+
+        private Fragment newBooksFragment(int position) {
+            Bundle args = new Bundle();
+            args.putInt("tab_index", position);
+            BooksFragment fragment = new BooksFragment();
+            fragment.setArguments(args);
+            return fragment;
+        }
+    }
+
+    public static class BooksFragment extends Fragment {
+        private int currentTab;
+        private static final int TAB_NEW = 0;
+        private static final int TAB_ALL = 1;
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            currentTab = getArguments().getInt("tab_index");
         }
     }
 }
