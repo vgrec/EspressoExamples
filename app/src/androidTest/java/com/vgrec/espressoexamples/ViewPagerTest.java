@@ -24,8 +24,8 @@ import static org.hamcrest.CoreMatchers.allOf;
  */
 public class ViewPagerTest extends ActivityInstrumentationTestCase2<ViewPagerActivity> {
 
-    private static final String BOOK_TITLE = "C++ for primers";
-    private static final String BOOK_AUTHOR = "Robert Mulavski";
+    private static final String BOOK_TITLE = "Clean Code";
+    private static final String BOOK_AUTHOR = "Robert C. Martin";
 
     public ViewPagerTest() {
         super(ViewPagerActivity.class);

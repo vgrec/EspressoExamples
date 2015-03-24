@@ -21,8 +21,8 @@ import static org.hamcrest.CoreMatchers.allOf;
  */
 public class CustomListTest extends ActivityInstrumentationTestCase2<CustomListActivity> {
 
-    private static final String BOOK_TITLE = "C++ for primers";
-    private static final String BOOK_AUTHOR = "Robert Mulavski";
+    private static final String BOOK_TITLE = "Java Concurrency in Practice";
+    private static final String BOOK_AUTHOR = "Brian Goetz";
 
     public CustomListTest() {
         super(CustomListActivity.class);
