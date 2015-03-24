@@ -19,7 +19,6 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.vgrec.espressoexamples.Database;
 import com.vgrec.espressoexamples.R;
-import com.vgrec.espressoexamples.activities.BookDetailsActivity;
 import com.vgrec.espressoexamples.adapter.BooksAdapter;
 import com.vgrec.espressoexamples.models.Book;
 

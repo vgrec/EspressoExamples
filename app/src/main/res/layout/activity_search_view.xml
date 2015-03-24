@@ -10,7 +10,7 @@
     tools:context="com.vgrec.espressoexamples.activities.SearchViewActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="@string/search_activity_help_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

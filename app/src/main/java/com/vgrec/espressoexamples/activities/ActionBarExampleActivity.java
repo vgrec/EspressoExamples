@@ -28,12 +28,12 @@ public class ActionBarExampleActivity extends ActionBarActivity {
         toggleActionModeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toggleActionMode();
+                startActionMode();
             }
         });
     }
 
-    private void toggleActionMode() {
+    private void startActionMode() {
         if (actionMode == null) {
             actionMode = startSupportActionMode(actionModeCallbacks);
         }

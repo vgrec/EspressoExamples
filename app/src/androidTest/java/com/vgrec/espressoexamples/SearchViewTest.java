@@ -31,6 +31,8 @@ import static org.hamcrest.Matchers.not;
  */
 public class SearchViewTest extends ActivityInstrumentationTestCase2<SearchViewActivity> {
 
+    public static final String HELSINKI = "Helsinki";
+
     public SearchViewTest() {
         super(SearchViewActivity.class);
     }
@@ -54,18 +56,18 @@ public class SearchViewTest extends ActivityInstrumentationTestCase2<SearchViewA
 
     public void testItemFound() {
         onView(withId(R.id.action_search)).perform(click());
-        onView(isAssignableFrom(EditText.class)).perform(typeText("Java"), pressImeActionButton());
+        onView(isAssignableFrom(EditText.class)).perform(typeText(HELSINKI), pressImeActionButton());
 
         // Check empty view is not displayed
         onView(withId(R.id.empty_view)).check(matches(not(isDisplayed())));
 
         // Check the item we are looking for is in the search result list.
-        onData(allOf(is(instanceOf(String.class)), withItemContent("Java"))).check(matches(isDisplayed()));
+        onData(allOf(is(instanceOf(String.class)), withItemContent(HELSINKI))).check(matches(isDisplayed()));
     }
 
     public void testSearchSuggestionDisplayed() {
         onView(withId(R.id.action_search)).perform(click());
-        onView(isAssignableFrom(EditText.class)).perform(typeText("Java"), pressImeActionButton());
+        onView(isAssignableFrom(EditText.class)).perform(typeText(HELSINKI), pressImeActionButton());
 
         // Go back to previous screen
         pressBack();
@@ -74,17 +76,17 @@ public class SearchViewTest extends ActivityInstrumentationTestCase2<SearchViewA
         onView(isAssignableFrom(EditText.class)).perform(clearText());
 
         // Enter the first letter of the previously searched word
-        onView(isAssignableFrom(EditText.class)).perform(typeText("Ja"));
+        onView(isAssignableFrom(EditText.class)).perform(typeText("He"));
 
         // Check the search suggestions appear
-        onView(withText("Java"))
+        onView(withText(HELSINKI))
                 .inRoot(withDecorView(not(Matchers.is(getActivity().getWindow().getDecorView()))))
                 .check(matches(isDisplayed()));
     }
 
     public void testClickOnSearchSuggestion() {
         onView(withId(R.id.action_search)).perform(click());
-        onView(isAssignableFrom(EditText.class)).perform(typeText("Java"), pressImeActionButton());
+        onView(isAssignableFrom(EditText.class)).perform(typeText(HELSINKI), pressImeActionButton());
 
         // Go back to previous screen
         pressBack();
@@ -93,16 +95,16 @@ public class SearchViewTest extends ActivityInstrumentationTestCase2<SearchViewA
         onView(isAssignableFrom(EditText.class)).perform(clearText());
 
         // Enter the first letter of the previously searched word
-        onView(isAssignableFrom(EditText.class)).perform(typeText("Ja"));
+        onView(isAssignableFrom(EditText.class)).perform(typeText("He"));
 
 
         // Click on the "Java" item from the suggestions list
-        onView(withText("Java"))
+        onView(withText(HELSINKI))
                 .inRoot(withDecorView(not(Matchers.is(getActivity().getWindow().getDecorView()))))
                 .perform(click());
 
         // Check the item appears in search results list.
-        onData(allOf(is(instanceOf(String.class)), withItemContent("Java"))).check(matches(isDisplayed()));
+        onData(allOf(is(instanceOf(String.class)), withItemContent(HELSINKI))).check(matches(isDisplayed()));
     }
 
 }

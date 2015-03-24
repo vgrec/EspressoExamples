@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.vgrec.espressoexamples.Database;
 import com.vgrec.espressoexamples.R;
 import com.vgrec.espressoexamples.provider.AppRecentSearchesProvider;
 
@@ -16,19 +17,6 @@ import java.util.List;
 
 
 public class SearchableActivity extends ActionBarActivity {
-
-    /**
-     * A dummy collection of data where the user search term will be searched.
-     */
-    private String[] database = {
-            "John Babovici",
-            "Maria Huanes",
-            "What to do",
-            "If I told you",
-            "Java",
-            "Master mind",
-            "Jorj"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +46,7 @@ public class SearchableActivity extends ActionBarActivity {
     private List<String> search(String query) {
         List<String> results = new ArrayList<>();
 
-        for (String record : database) {
+        for (String record : Database.CITIES) {
             if (record.toLowerCase().startsWith(query.toLowerCase())) {
                 results.add(record);
             }

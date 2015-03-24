@@ -21,7 +21,7 @@ public class SpinnerSelectionActivity extends ActionBarActivity {
         final TextView labelTextView = (TextView) findViewById(R.id.country_label);
         Spinner spinner = (Spinner) findViewById(R.id.countries_spinner);
 
-        spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.europe_countries)));
+        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.europe_countries)));
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
