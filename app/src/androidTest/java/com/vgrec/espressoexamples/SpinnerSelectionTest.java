@@ -53,8 +53,13 @@ public class SpinnerSelectionTest extends ActivityInstrumentationTestCase2<Spinn
     }
 
     public void testLabelUpdatesIfValidCountrySelected() {
+        // Click on the Spinner
         onView(withId(R.id.countries_spinner)).perform(click());
+
+        // Select a country from the list
         onData(allOf(is(instanceOf(String.class)), is(VALID_COUNTRY_NAME))).perform(click());
+
+        // Check that the country label is updated with selected country
         onView(withId(R.id.country_label)).check(matches(withText(VALID_COUNTRY_NAME)));
     }
 }

@@ -19,6 +19,10 @@ import static org.hamcrest.Matchers.equalTo;
  */
 public class CustomMatchers {
 
+
+    /**
+     * Finds the AdapterView and let another Matcher interrogate the data within it.
+     */
     public static Matcher<View> withAdaptedData(final Matcher<Object> dataMatcher) {
         return new TypeSafeMatcher<View>() {
 
@@ -45,6 +49,15 @@ public class CustomMatchers {
         };
     }
 
+    /**
+     * Matches an item from an AdapterView with a specific String.
+     * (The items in AdapterView should be strings)
+     */
+    public static Matcher<Object> withItemContent(String expectedText) {
+        checkNotNull(expectedText);
+        return withItemContent(equalTo(expectedText));
+    }
+
     public static Matcher<Object> withItemContent(final Matcher<String> itemTextMatcher) {
         checkNotNull(itemTextMatcher);
         return new BoundedMatcher<Object, String>(String.class) {
@@ -61,11 +74,10 @@ public class CustomMatchers {
         };
     }
 
-    public static Matcher<Object> withItemContent(String expectedText) {
-        checkNotNull(expectedText);
-        return withItemContent(equalTo(expectedText));
-    }
 
+    /**
+     * Matches a Book with a specific ID
+     */
     public static Matcher<Object> withBookId(final int bookId) {
         return new BoundedMatcher<Object, Book>(Book.class) {
             @Override
@@ -80,6 +92,9 @@ public class CustomMatchers {
         };
     }
 
+    /**
+     * Matches a Book with a specific title
+     */
     public static Matcher<Object> withBookTitle(final String bookTitle) {
         return new BoundedMatcher<Object, Book>(Book.class) {
             @Override
@@ -94,6 +109,9 @@ public class CustomMatchers {
         };
     }
 
+    /**
+     * Matches a Book with a specific author name
+     */
     public static Matcher<Object> withBookAuthor(final String bookAuthor) {
         return new BoundedMatcher<Object, Book>(Book.class) {
             @Override
