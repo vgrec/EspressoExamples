@@ -14,6 +14,7 @@ import static com.vgrec.espressoexamples.matchers.CustomMatchers.withBookAuthor;
 import static com.vgrec.espressoexamples.matchers.CustomMatchers.withBookId;
 import static com.vgrec.espressoexamples.matchers.CustomMatchers.withBookTitle;
 import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.anything;
 
 
 /**
@@ -53,6 +54,12 @@ public class CustomListTest extends ActivityInstrumentationTestCase2<CustomListA
         onView(withId(R.id.book_title)).check(matches(withText(BOOK_TITLE)));
 
         // Check the correct author is displayed
+        onView(withId(R.id.book_author)).check(matches(withText(BOOK_AUTHOR)));
+    }
+
+    public void testClickOnBookByPosition(){
+        onData(anything()).atPosition(5).perform(click());
+        onView(withId(R.id.book_title)).check(matches(withText(BOOK_TITLE)));
         onView(withId(R.id.book_author)).check(matches(withText(BOOK_AUTHOR)));
     }
 }
