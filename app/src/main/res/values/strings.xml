@@ -37,7 +37,7 @@
     <string name="dialog_message">This is a very important action that you need to confirm.</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
-    <string name="search_activity_help_text">See SearchViewActivity for valid search options</string>
+    <string name="search_activity_help_text">Valid options: \nBerlin \nHelsinki \nParis \nSofia</string>
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
     <string name="RecyclerView">RecyclerView</string>
 </resources>
