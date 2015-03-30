@@ -41,7 +41,7 @@ public class RecyclerBooksAdapter extends RecyclerView.Adapter<RecyclerBooksAdap
         return Database.ALL_BOOKS.size();
     }
 
-    protected static class RowHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class RowHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView titleTextView;
         TextView authorTextView;
