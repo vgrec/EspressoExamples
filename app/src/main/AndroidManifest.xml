@@ -63,6 +63,10 @@
             android:name=".activities.DialogExampleActivity"
             android:label="@string/title_activity_dialog_example" >
         </activity>
+        <activity
+            android:name=".activities.RecyclerViewActivity"
+            android:label="@string/title_activity_recycler_view" >
+        </activity>
     </application>
 
 </manifest>

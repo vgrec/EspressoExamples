@@ -24,6 +24,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.jpardogo.materialtabstrip:library:1.0.9'
+    compile 'com.android.support:recyclerview-v7:21.0.3'
 
     // Testing dependencies
     androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
