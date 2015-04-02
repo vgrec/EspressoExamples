@@ -40,4 +40,8 @@
     <string name="search_activity_help_text">Valid options: \nBerlin \nHelsinki \nParis \nSofia</string>
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
     <string name="RecyclerView">RecyclerView</string>
+    <string name="title_activity_date_time_picker">DateTimePickerActivity</string>
+    <string name="date_picker">DatePicker</string>
+    <string name="time_picker">TimePicker</string>
+    <string name="date_time_pickers">Date / Time Pickers</string>
 </resources>

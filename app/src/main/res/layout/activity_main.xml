@@ -68,5 +68,11 @@
             android:layout_height="wrap_content"
             android:text="@string/RecyclerView" />
 
+        <Button
+            android:id="@+id/pickers_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date_time_pickers" />
+
     </LinearLayout>
 </ScrollView>

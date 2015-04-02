@@ -24,6 +24,7 @@ public class MainActivity extends ActionBarActivity {
         setListener(R.id.viewpager_button, ViewPagerActivity.class);
         setListener(R.id.dialogs_button, DialogExampleActivity.class);
         setListener(R.id.recycler_view_button, RecyclerViewActivity.class);
+        setListener(R.id.pickers_button, DateTimePickerActivity.class);
     }
 
     private <T extends Activity> void setListener(int buttonResId, final Class<T> activity) {

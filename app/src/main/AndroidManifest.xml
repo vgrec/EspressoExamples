@@ -67,6 +67,10 @@
             android:name=".activities.RecyclerViewActivity"
             android:label="@string/title_activity_recycler_view" >
         </activity>
+        <activity
+            android:name=".activities.DateTimePickerActivity"
+            android:label="@string/title_activity_date_time_picker" >
+        </activity>
     </application>
 
 </manifest>
